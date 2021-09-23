@@ -5,13 +5,13 @@ ball_x=10;
 hole_y=400;
 hole_x=800;
 
-block_image_width = 30;
-block_image_height = 30;
+block_image_width = 5;
+block_image_height = 5;
 
 function load_img(){
 	fabric.Image.fromURL("golf-h.png", function(Img) {
 		hole_obj = Img;
-		hole_obj.scaleToWidth(150);
+		hole_obj.scaleToWidth(140);
 		hole_obj.scaleToHeight(140);
 		hole_obj.set({
 		top:hole_y,
@@ -48,12 +48,11 @@ function my_keydown(e)
 	if((ball_x==hole_x)&&(ball_y==hole_y))
 	{
         canvas.remove(ball_obj);
-		block_image_width = block_image_width + 10;
-        block_image_height = block_image_height + 10;
 		document.getElementById("hd3").innerHTML= "You Have Hit The Goal!!!";
         document.getElementById("myCanvas").style.borderColor="red";
 		
 	}
+	else
 	
 	    {
 		if(keyPressed == '38')
