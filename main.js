@@ -1,7 +1,7 @@
 var canvas = new fabric.Canvas('myCanvas');
 
-ball_y=10;
-ball_x=10;
+ball_y=0;
+ball_x=0;
 hole_y=400;
 hole_x=800;
 
@@ -11,8 +11,8 @@ block_image_height = 5;
 function load_img(){
 	fabric.Image.fromURL("golf-h.png", function(Img) {
 		hole_obj = Img;
-		hole_obj.scaleToWidth(140);
-		hole_obj.scaleToHeight(140);
+		hole_obj.scaleToWidth(50);
+		hole_obj.scaleToHeight(50);
 		hole_obj.set({
 		top:hole_y,
 		left:hole_x    
